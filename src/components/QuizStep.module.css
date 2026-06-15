@@ -1,0 +1,213 @@
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+}
+
+.stepCounter {
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-align: right;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.progressBar {
+  width: 100%;
+  height: 2px;
+  background: var(--border);
+  border-radius: 2px;
+  margin-bottom: 2.5rem;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--warm);
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.questionLabel {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.375rem;
+  font-weight: 400;
+  margin-bottom: 1.75rem;
+  line-height: 1.4;
+  color: var(--dark);
+}
+
+.choices {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.choiceBtn {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.875rem 1.125rem;
+  text-align: left;
+  font-size: 0.9375rem;
+  color: var(--dark);
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+  font-weight: 400;
+  position: relative;
+}
+
+.choiceBtn:hover {
+  border-color: var(--warm);
+  background: #FDF9F5;
+}
+
+.choiceBtn.selected {
+  border-color: var(--warm);
+  background: #FDF6EF;
+  font-weight: 500;
+}
+
+.checkIcon {
+  position: absolute;
+  right: 1.125rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--warm);
+}
+
+.multiHint {
+  font-size: 0.8125rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.textInput {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.875rem 1.125rem;
+  font-size: 0.9375rem;
+  background: var(--card);
+  color: var(--dark);
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.textInput:focus {
+  border-color: var(--warm);
+}
+
+.textInput::placeholder {
+  color: var(--muted);
+}
+
+.navRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.btnBack {
+  background: none;
+  border: none;
+  font-size: 0.875rem;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 0.5rem 0;
+  letter-spacing: 0.02em;
+  transition: color 0.15s;
+}
+
+.btnBack:hover {
+  color: var(--dark);
+}
+
+.btnNext {
+  background: var(--dark);
+  color: var(--cream);
+  border: none;
+  border-radius: 50px;
+  padding: 0.75rem 2rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s;
+  letter-spacing: 0.01em;
+}
+
+.btnNext:hover {
+  background: #2D2720;
+}
+
+.btnNext:disabled {
+  background: var(--border);
+  color: var(--muted);
+  cursor: not-allowed;
+}
+
+.nextGroup,
+.generateGroup {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.generateGroup {
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.btnGenerate {
+  width: 100%;
+  background: var(--warm);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  letter-spacing: 0.02em;
+}
+
+.btnGenerate:hover {
+  background: var(--warm-dark);
+  transform: translateY(-1px);
+}
+
+.btnGenerate:disabled {
+  background: var(--border);
+  color: var(--muted);
+  cursor: not-allowed;
+  transform: none;
+}
+
+.skipLink {
+  font-size: 0.8125rem;
+  color: var(--muted);
+  text-decoration: underline;
+  cursor: pointer;
+  background: none;
+  border: none;
+  white-space: nowrap;
+}
+
+.skipLink:hover {
+  color: var(--dark);
+}
+
+.errorBox {
+  background: #FFF5F5;
+  border: 1px solid #FFCCCC;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  font-size: 0.875rem;
+  color: #CC4444;
+  margin-top: 1rem;
+}
