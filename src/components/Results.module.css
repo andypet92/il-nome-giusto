@@ -1,0 +1,229 @@
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  color: var(--dark);
+}
+
+.sub {
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.nameCard {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  transition: border-color 0.2s;
+}
+
+.nameCard:hover {
+  border-color: #D4BCA8;
+}
+
+.nameCard.featured {
+  border-color: var(--warm);
+  background: linear-gradient(135deg, #FDF9F5 0%, #FEFCFA 100%);
+}
+
+.badge {
+  position: absolute;
+  top: -11px;
+  right: 1rem;
+  background: var(--warm);
+  color: white;
+  font-size: 0.6875rem;
+  padding: 3px 12px;
+  border-radius: 20px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.namePrimary {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--dark);
+  margin-bottom: 0.25rem;
+  line-height: 1.2;
+}
+
+.nameOrigin {
+  font-size: 0.8125rem;
+  color: var(--warm);
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.03em;
+}
+
+.nameDesc {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.tag {
+  font-size: 0.75rem;
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 3px 10px;
+  color: var(--muted);
+}
+
+.btnRestart {
+  width: 100%;
+  border: 1px solid var(--border);
+  background: transparent;
+  border-radius: 50px;
+  padding: 0.75rem;
+  font-size: 0.875rem;
+  color: var(--muted);
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.btnRestart:hover {
+  border-color: var(--dark);
+  color: var(--dark);
+}
+
+/* ── Paywall ─────────────────────────────────────────────────────────────── */
+
+.paywall {
+  margin-bottom: 1rem;
+}
+
+.paywallLocked {
+  position: relative;
+  pointer-events: none;
+  user-select: none;
+}
+
+.lockedCard {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.lockedName {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: var(--border);
+  margin-bottom: 0.75rem;
+  letter-spacing: 4px;
+}
+
+.lockedBar {
+  height: 10px;
+  background: var(--border);
+  border-radius: 6px;
+  margin-bottom: 8px;
+  width: 90%;
+}
+
+.paywallOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: linear-gradient(to bottom, transparent, var(--cream));
+  pointer-events: none;
+}
+
+.paywallCta {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.75rem 1.5rem;
+  text-align: center;
+  margin-top: -1rem;
+  position: relative;
+}
+
+.paywallTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--dark);
+  margin-bottom: 0.75rem;
+}
+
+.paywallDesc {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.btnPay {
+  width: 100%;
+  background: var(--warm);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.75rem;
+}
+
+.btnPay:hover {
+  background: var(--warm-dark);
+  transform: translateY(-1px);
+}
+
+.btnPay:disabled {
+  background: var(--border);
+  color: var(--muted);
+  cursor: not-allowed;
+  transform: none;
+}
+
+.paywallSub {
+  font-size: 0.75rem;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+}
+
+.payError {
+  font-size: 0.875rem;
+  color: #CC4444;
+  background: #FFF5F5;
+  border: 1px solid #FFCCCC;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+}
